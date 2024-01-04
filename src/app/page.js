@@ -1,95 +1,70 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./index.module.scss";
+import copertina from "../../public/grafica.jpg";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+      <div className={styles.copertina}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={copertina}
+          width={"100%"}
+          className={"img"}
+          alt="copertina"
         />
+        <p>
+          La mostra rappresenta un’occasione unica per scoprire uno dei tasselli
+          fondamentali nell’evoluzione pittorica italiana e internazionale. La
+          mostra racconta la nascita e l’evoluzione della{" "}
+          <strong>pittura macchiaiola</strong> nei suoi più diversi aspetti,
+          mettendo in risalto le origini e le ragioni di questa rivoluzione
+          artistica, i suoi sviluppi e la sua importante eredità. Obiettivo
+          della mostra è quello di indagare i protagonisti e l’evoluzione di
+          questo importante movimento, fondamentale per la nascita della pittura
+          moderna italiana.
+        </p>
+        <p>
+          Il percorso espositivo presenta oltre <strong>settanta opere</strong>{" "}
+          (provenienti da prestigiosi musei italiani, da importanti fondazioni
+          specializzate sul tema e da collezioni private) firmate dai principali
+          esponenti del gruppo dei Macchiaioli (Telemaco Signorini, Giovanni
+          Fattori, Silvestro Lega, Cristiano Banti, Giuseppe Abbati, Vincenzo
+          Cabianca, Adriano Cecioni, Vito d’Ancona, Raffaello Sernesi, Odoardo
+          Borrani e altri) e da altri artisti che hanno avuto relazioni con il
+          movimento o che possono servire da confronto.
+        </p>
+        <Link
+          href={
+            "https://www.navigaresrl.com/mostra/la-mostra-sui-macchiaioli-a-torino/"
+          }
+          className={styles.link}
+        >
+          Info Mostra
+        </Link>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className={styles.iscrizione}>
+        <h4>
+          Iscriviti entro il 28 Gennaio alla nostra Waiting List per ricevere
+          uno sconto del 30%
+        </h4>
+        <h5>
+          * lo sconto sarà valido fino al 3 marzo e verrà applicato SOLO per il
+          biglietto INTERO FERIALE acquistato in biglietteria
+        </h5>
+        <Link
+          href={
+            "mailto:web@navigaresrl.com?subject=Iscrizione Mailing List Macchiaioli Torino"
+          }
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <p>SCRIVICI NOME E COGNOME</p>
+        </Link>
+        <h6>N.B : Cliccando su Invia autorizzi il trattamento dei tuoi dati</h6>
+      </div>
+      <div className={styles.footer}>
+        Una produzione di
+        <Link href={"https://www.navigaresrl.com/"}>NavigareSrl</Link>
       </div>
     </main>
-  )
+  );
 }
